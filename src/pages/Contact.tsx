@@ -168,12 +168,23 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-12 p-8 bg-cream rounded-sm border border-border">
-                <p className="text-sm text-muted-foreground text-center">
-                  Located in the heart of San Francisco's South of Market district
-                </p>
+              {/* Google Maps Embed */}
+              <div className="mt-12 rounded-sm overflow-hidden border border-border shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5477895252!2d-122.40960068468198!3d37.78323797975745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807d7c3a7aab%3A0x9d2e5c5b1e2e8b9a!2s471%20Jessie%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1699900000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="San Jessie LLC Location"
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                />
               </div>
+              <p className="text-xs text-muted-foreground text-center mt-3">
+                Located in San Francisco's South of Market district
+              </p>
             </div>
 
             {/* Contact Form */}
