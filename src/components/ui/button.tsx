@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,11 +15,19 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Corporate variants
+        gold: "bg-gold text-navy-dark hover:bg-gold-light font-semibold tracking-wide",
+        "gold-outline": "border-2 border-gold text-gold hover:bg-gold hover:text-navy-dark font-semibold tracking-wide",
+        hero: "bg-gold text-navy-dark hover:bg-gold-light font-semibold tracking-wider uppercase text-sm px-8 py-6",
+        "hero-outline": "border-2 border-white/30 text-white hover:bg-white/10 font-medium tracking-wider uppercase text-sm px-8 py-6",
+        navy: "bg-navy text-white hover:bg-navy-light font-semibold",
+        "navy-outline": "border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        sm: "h-9 rounded-sm px-3",
+        lg: "h-11 rounded-sm px-8",
+        xl: "h-14 rounded-sm px-10 text-base",
         icon: "h-10 w-10",
       },
     },
